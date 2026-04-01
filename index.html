@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurora Trails — промо-сайт приключенческих туров</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="theme-dark">
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="site-header">
+    <div class="logo">Aurora Trails</div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link active">Главная</a>
+      <a href="gallery.html" class="nav-link">Галерея</a>
+      <a href="booking.html" class="nav-link">Бронирование</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Adventure / Nature / Northern Lights</p>
+        <h1>Путешествия, которые хочется прожить, а не просто посмотреть</h1>
+        <p class="hero-text">
+          Aurora Trails — это промо-проект туров по северным локациям: Исландия, Норвегия, ледники,
+          водопады, фото-экспедиции и небольшие группы.
+        </p>
+        <div class="hero-actions">
+          <a href="gallery.html" class="btn btn-primary" id="heroButton">Смотреть туры</a>
+          <button class="btn btn-secondary" id="promoButton" type="button">Открыть предложение</button>
+        </div>
+      </div>
+      <div class="hero-card card pulse-target" id="heroCard">
+        <div class="stat">
+          <strong>12</strong>
+          <span>маршрутов</span>
+        </div>
+        <div class="stat">
+          <strong>4.9</strong>
+          <span>средний рейтинг</span>
+        </div>
+        <div class="stat">
+          <strong>100%</strong>
+          <span>эмоций и контента</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <p class="eyebrow">Почему выбирают нас</p>
+        <h2>Спокойный, стильный и понятный формат путешествий</h2>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card info-card tilt-card">
+          <h3>Маленькие группы</h3>
+          <p>Никакой толпы. Маршруты построены так, чтобы было комфортно и по темпу, и по логистике.</p>
+        </article>
+        <article class="card info-card tilt-card">
+          <h3>Фото-точки</h3>
+          <p>Показываем места, где реально получаются сильные кадры, а не просто галочка «были здесь».</p>
+        </article>
+        <article class="card info-card tilt-card">
+          <h3>Гибкая программа</h3>
+          <p>Мы подстраиваемся под свет, погоду и настроение поездки, а не держимся за сухой шаблон.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section banner banner-cta">
+      <div>
+        <p class="eyebrow">Next step</p>
+        <h2>Перейди в галерею и посмотри атмосферу маршрутов</h2>
+      </div>
+      <a href="gallery.html" class="btn btn-primary">Открыть галерею</a>
+    </section>
+  </main>
+
+  <div class="popup-overlay" id="promoOverlay">
+    <div class="popup-window">
+      <button class="popup-close" id="closePopup" aria-label="Закрыть окно">×</button>
+      <p class="eyebrow">Спецпредложение</p>
+      <h3>Скидка 15% на раннее бронирование зимних туров</h3>
+      <p>
+        Забронируй поездку до конца месяца и получи скидку на любой северный маршрут.
+        Это учебный popup-блок, сделанный через JavaScript и переключение классов.
+      </p>
+      <a href="booking.html" class="btn btn-primary">Перейти к бронированию</a>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

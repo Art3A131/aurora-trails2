@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurora Trails — галерея туров</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="theme-dark gallery-page">
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <header class="site-header">
+    <div class="logo">Aurora Trails</div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Главная</a>
+      <a href="gallery.html" class="nav-link active">Галерея</a>
+      <a href="booking.html" class="nav-link">Бронирование</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section compact-top">
+      <div class="section-title">
+        <p class="eyebrow">Gallery</p>
+        <h1 id="galleryTitle">Маршруты и настроение поездки</h1>
+        <p class="hero-text narrow">
+          На этой странице есть обработка событий мыши и клавиатуры: кнопки карусели, modal-галерея,
+          стрелки клавиатуры, Escape и автопрокрутка по клавише G.
+        </p>
+      </div>
+    </section>
+
+    <section class="carousel section">
+      <div class="carousel-container">
+        <button class="carousel-left carousel-button" aria-label="Назад">‹</button>
+        <div class="image-container">
+          <div class="image-wrapper wrapper-1">
+            <img src="img/waterfall.jpg" alt="Исландский водопад" class="carousel-image">
+          </div>
+          <div class="image-wrapper">
+            <img src="img/aurora.jpg" alt="Северное сияние" class="carousel-image">
+          </div>
+          <div class="image-wrapper">
+            <img src="img/lake.jpg" alt="Горы и озеро" class="carousel-image">
+          </div>
+          <div class="image-wrapper">
+            <img src="img/road.jpg" alt="Дорога в горах" class="carousel-image">
+          </div>
+        </div>
+        <button class="carousel-right carousel-button" aria-label="Вперёд">›</button>
+      </div>
+
+      <div class="button-container-small">
+        <button class="carousel-left-small carousel-button-small" aria-label="Назад">‹</button>
+        <button class="carousel-right-small carousel-button-small" aria-label="Вперёд">›</button>
+      </div>
+
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <p class="eyebrow">Modal gallery</p>
+        <h2>Нажми на изображение, чтобы открыть модальное окно</h2>
+      </div>
+
+      <div class="row thumbs-row">
+        <div class="column thumb-column">
+          <img src="img/waterfall.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor gallery-thumb" alt="Водопад и базальтовые скалы">
+        </div>
+        <div class="column thumb-column">
+          <img src="img/aurora.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor gallery-thumb" alt="Северное сияние над горами">
+        </div>
+        <div class="column thumb-column">
+          <img src="img/lake.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor gallery-thumb" alt="Тихое озеро и вершины">
+        </div>
+        <div class="column thumb-column">
+          <img src="img/road.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor gallery-thumb" alt="Сценическая дорога">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="img/waterfall.jpg" style="width:100%" alt="Водопад и базальтовые скалы">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="img/aurora.jpg" style="width:100%" alt="Северное сияние над горами">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="img/lake.jpg" style="width:100%" alt="Тихое озеро и вершины">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="img/road.jpg" style="width:100%" alt="Сценическая дорога">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="column modal-thumb-column">
+        <img class="demo" src="img/waterfall.jpg" onclick="currentSlide(1)" alt="Водопад и базальтовые скалы">
+      </div>
+      <div class="column modal-thumb-column">
+        <img class="demo" src="img/aurora.jpg" onclick="currentSlide(2)" alt="Северное сияние над горами">
+      </div>
+      <div class="column modal-thumb-column">
+        <img class="demo" src="img/lake.jpg" onclick="currentSlide(3)" alt="Тихое озеро и вершины">
+      </div>
+      <div class="column modal-thumb-column">
+        <img class="demo" src="img/road.jpg" onclick="currentSlide(4)" alt="Сценическая дорога">
+      </div>
+    </div>
+  </div>
+
+  <script src="js/gallery.js"></script>
+</body>
+</html>

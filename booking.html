@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurora Trails — бронирование</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="theme-dark booking-page">
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <header class="site-header">
+    <div class="logo">Aurora Trails</div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Главная</a>
+      <a href="gallery.html" class="nav-link">Галерея</a>
+      <a href="booking.html" class="nav-link active">Бронирование</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section compact-top">
+      <div class="section-title">
+        <p class="eyebrow">Booking / FAQ</p>
+        <h1 id="bookingTitle">Заполни форму и посмотри частые вопросы</h1>
+        <p class="hero-text narrow">
+          На этой странице есть accordion, форма, popup после отправки, события input/change/click,
+          а также клавиши <strong>R</strong> для очистки формы и <strong>Escape</strong> для закрытия popup.
+        </p>
+      </div>
+    </section>
+
+    <section class="section two-columns">
+      <div class="card form-card">
+        <h2>Заявка на тур</h2>
+        <form id="bookingForm" class="booking-form">
+          <label>
+            Имя
+            <input type="text" id="name" placeholder="Ваше имя" required>
+          </label>
+          <label>
+            Email
+            <input type="email" id="email" placeholder="name@email.com" required>
+          </label>
+          <label>
+            Направление
+            <select id="tourSelect" required>
+              <option value="">Выберите тур</option>
+              <option>Исландия</option>
+              <option>Норвегия</option>
+              <option>Северное сияние</option>
+              <option>Фото-экспедиция</option>
+            </select>
+          </label>
+          <label>
+            Комментарий
+            <textarea id="message" rows="4" placeholder="Что вам интересно в поездке?"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="submitBtn">Отправить заявку</button>
+            <button type="button" class="btn btn-secondary" id="resetBtn">Очистить</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card faq-card">
+        <h2>Частые вопросы</h2>
+
+        <button class="accordion">Сколько длится тур?</button>
+        <div class="panel">
+          <p>В среднем от 5 до 9 дней. Есть короткие маршруты и полноценные экспедиционные программы.</p>
+        </div>
+
+        <button class="accordion">Нужна ли специальная подготовка?</button>
+        <div class="panel">
+          <p>Нет. Большинство маршрутов рассчитаны на обычный активный отдых без экстремальной нагрузки.</p>
+        </div>
+
+        <button class="accordion">Можно ли поехать одному?</button>
+        <div class="panel">
+          <p>Да. Многие участники едут соло, а внутри группы быстро складывается нормальная атмосфера.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="popup-overlay" id="successOverlay">
+    <div class="popup-window success-window">
+      <button class="popup-close" id="closeSuccess" aria-label="Закрыть окно">×</button>
+      <p class="eyebrow">Заявка отправлена</p>
+      <h3>Спасибо! Мы свяжемся с вами в ближайшее время</h3>
+      <p id="resultText">Форма обработана через JavaScript без реальной отправки на сервер.</p>
+      <a href="index.html" class="btn btn-primary">Вернуться на главную</a>
+    </div>
+  </div>
+
+  <script src="js/booking.js"></script>
+</body>
+</html>
